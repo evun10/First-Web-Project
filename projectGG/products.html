@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Gym Guides</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="border-box">
+        <header>
+            <h1>G.G | Gym Guides</h1>
+            <nav>
+                <a href="index.html">Home</a> &nbsp;
+                <a href="guides.html">Guides</a> &nbsp;
+                <a href="contact.html">Contact</a> &nbsp;
+                <a href="advice.html">Advice</a> &nbsp;
+                <a href="products.html">Products</a>
+                <hr>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Shop Gym Essentials</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <h3>Resistance Bands</h3>
+                    <p>$10.00</p>
+                    <button onclick="addToCart('Resistance Bands', 10)">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <h3>Workout Gloves</h3>
+                    <p>$15.00</p>
+                    <button onclick="addToCart('Workout Gloves', 15)">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <h3>Protein Shaker</h3>
+                    <p>$12.00</p>
+                    <button onclick="addToCart('Protein Shaker', 12)">Add to Cart</button>
+                </div>
+            </div>
+
+            <h2>Cart</h2>
+            <ul id="cart"></ul>
+            <p>Total: $<span id="total">0</span></p>
+        </main>
+
+        <footer>©2025 | Evan Garcia | EvanGarcia535@gmail.com</footer>
+    </div>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            total += price;
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartList = document.getElementById('cart');
+            const totalDisplay = document.getElementById('total');
+            cartList.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.product} - $${item.price}`;
+                cartList.appendChild(li);
+            });
+            totalDisplay.textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
