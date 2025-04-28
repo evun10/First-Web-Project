@@ -47,6 +47,20 @@
 
                     <button type="submit">Send Message</button>
                 </form>
+                <script>
+                    function validateForm() {
+                      let name = document.forms["contactForm"]["name"].value;
+                      if (name == "") {
+                        alert("Name must be filled out.");
+                        return false;
+                      }
+                    }
+                  </script>
+                  
+                  <form name="contactForm" onsubmit="return validateForm()">
+                    Name: <input type="text" name="name">
+                    <input type="submit" value="Submit">
+                  </form>
             </section>
 
             <hr style="border: 2px solid black;">
