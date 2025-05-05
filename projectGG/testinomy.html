@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read inspiring fitness success stories from Gym Guides users.">
+    <title>Testimonials - Gym Guides</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="index.html"> Home </a>
+                &nbsp;
+            
+                <a href="guides.html"> Guides </a>
+                &nbsp;
+            
+                <a href="contact.html"> Contact </a>
+            
+                &nbsp;
+                <a href="advice.html"> Advice </a>
+                &nbsp;
+                <a href="products.html"> Products </a>
+                <hr style="border: 2px solid black;">
+                &nbsp;
+                <a href="aboutMe.html"> About Me </a>
+                &nbsp;
+                <a href="food.html"> Food </a>
+                &nbsp;
+                <li><a href="testinomy.html" class="active">Testimonials</a></li>
+                &nbsp;
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="testimonials">
+            <h1>Success Stories from Our Users</h1>
+            <p>Read how others have transformed their fitness journeys with our guides and tips. Their stories can motivate you to achieve your fitness goals!</p>
+
+            <div class="testimonial">
+                <h2>Jane Doe</h2>
+                <p><strong>Fitness Journey:</strong> "I have started my fitness journey through gym guides and oh my! what aa wonderful jounrey it has been, so much tone!"</p>
+            </div>
+
+            <div class="testimonial">
+                <h2>John Smith</h2>
+                <p><strong>Fitness Journey:</strong> "I never knew how important nutrition was for achieving my fitness goals. The Nutrition Guide helped me understand what foods fuel my body best, and I lost 10 pounds in just 6 weeks while maintaining my strength!"</p>
+            </div>
+
+            <h3>Share Your Story</h3>
+            <p>Want to share your success? Let us know how our guides helped you achieve your goals and inspire others!</p>
+            <form action="submit_testimonial.php" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="testimony">Your Testimonial:</label>
+                <textarea id="testimony" name="testimony" rows="4" required></textarea>
+
+                <label for="photo">Upload Photo (If you'd like):</label>
+                <input type="file" id="photo" name="photo">
+
+                <button type="submit">Submit Testimonial</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | Evan Garcia | Evan Garcia535@gmail.com</p>
+    </footer>
+</body>
+</html>

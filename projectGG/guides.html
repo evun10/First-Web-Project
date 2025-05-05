@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="description" content="Explore beginner-friendly workout guides, videos, and articles to help you master strength training, HIIT, and proper form in the gym.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Gym Guides </title>
+    <title> Guides - Gym Guides </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="project.css">
 </head>
 <body>
@@ -11,26 +13,51 @@
     <div class="border-box">
         <header> 
             <h1> G.G | Gym Guides </h1>  
-            <nav> 
-                <a href="index.html"> Home </a> &nbsp;
-                <a href="guides.html"> Guides </a> &nbsp;
-                <a href="contact.html"> Contact </a> &nbsp;
+            <nav>
+              <ul>
+                <a href="index.html"> Home </a>
+                &nbsp;
+            
+                <a href="guides.html"> Guides </a>
+                &nbsp;
+            
+                <a href="contact.html"> Contact </a>
+            
+                &nbsp;
                 <a href="advice.html"> Advice </a>
                 &nbsp;
                 <a href="products.html"> Products </a>
-                <hr>
-            </nav>
+                <hr style="border: 2px solid black;">
+                &nbsp;
+                <a href="aboutMe.html"> About Me </a>
+                &nbsp;
+                <a href="food.html"> Food </a>
+                &nbsp;
+                <li><a href="testinomy.html" class="active">Testimonials</a></li>
+                &nbsp;
+              </ul>
+          </nav>
         </header>
 
         <main>
-
-            <section class="gallery">
-                <h2>Exercise Gallery</h2>
-                <div class="image-gallery">
-                  <img src="gettyimages-508260256-170667a.jpg" alt="Deadlift" />
-                  <img src="istockphoto-1061852042-612x612.jpg" alt="Squat" />
-                  <img src="istockphoto-1028273740-612x612.jpg" alt="Bench Press" />
+                <div id="slideshow">
+                  <img src="gettyimages-508260256-170667a.jpg" style="display: block;">
+                  <img src="istockphoto-1028273740-612x612.jpg" style="display: none;">
+                  <img src="istockphoto-1061852042-612x612.jpg" style="display: none;">
                 </div>
+                
+                <script>
+                  $(function() {
+                    let images = $('#slideshow img');
+                    let i = 0;
+                    setInterval(function() {
+                      images.eq(i).fadeOut();
+                      i = (i + 1) % images.length;
+                      images.eq(i).fadeIn();
+                    }, 3000);
+                  });
+                </script>
+                
               </section>
               
             <section class="intro">
